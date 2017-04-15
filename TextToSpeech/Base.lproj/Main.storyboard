@@ -20,6 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xob-X3-t84">
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Tap for Speech!">
                                     <color key="titleColor" red="0.074659351720000003" green="1" blue="0.51637633080000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -29,12 +30,12 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xob-X3-t84" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="306" id="1ds-7d-1Ro"/>
+                            <constraint firstItem="xob-X3-t84" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="270" id="1ds-7d-1Ro"/>
                             <constraint firstItem="xob-X3-t84" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="71" id="OJA-at-pc5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xob-X3-t84" secondAttribute="trailing" constant="72" id="mzb-MF-OdD"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xob-X3-t84" secondAttribute="bottom" constant="255" id="s3O-fa-nNs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xob-X3-t84" secondAttribute="bottom" constant="291" id="s3O-fa-nNs"/>
                         </constraints>
                     </view>
                 </viewController>
