@@ -22,13 +22,9 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate
        // self.speechVoice = AVSpeechSynthesisVoice.init(language: "en-AU")
     }
     
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-    }
+  
     
-    
-    @IBAction func speak(sender: AnyObject)
+    @IBAction func speak(_ sender: AnyObject)
     {
         let speechUtterance = AVSpeechUtterance(string: "Pokemon, gotta catch em all")
 
@@ -46,32 +42,23 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate
         speechUtterance.volume = 1.0
         
         //make it speak
-        speechSynthesizer.speakUtterance(speechUtterance)
+        speechSynthesizer.speak(speechUtterance)
         
     }
     
     // Called before speaking an utterance
-    func speechSynthesizer(synthesizer: AVSpeechSynthesizer, didStartSpeechUtterance utterance: AVSpeechUtterance)
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance)
     {
         print("About to say '\(utterance.speechString)'");
     }
     
     
     // Called when the synthesizer is finished speaking the utterance
-    func speechSynthesizer(synthesizer: AVSpeechSynthesizer, didFinishSpeechUtterance utterance: AVSpeechUtterance)
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance)
     {
         print("Finished saying '\(utterance.speechString)");
     }
     
-    
-    
-    // This method is called before speaking each word in the utterance.
-    func speechSynthesizer(synthesizer: AVSpeechSynthesizer, willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance)
-    {
-        let startIndex = utterance.speechString.startIndex.advancedBy(characterRange.location)
-        let endIndex = startIndex.advancedBy(characterRange.length)
-        print("Will speak the word '\(utterance.speechString.substringWithRange(startIndex..<endIndex))'");
-    }
 
 
 }
