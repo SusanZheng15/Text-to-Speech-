@@ -19,7 +19,7 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate
         super.viewDidLoad()
         
         speechSynthesizer.delegate = self
-       // self.speechVoice = AVSpeechSynthesisVoice.init(language: "en-AU")
+        self.speechVoice = AVSpeechSynthesisVoice.init(language: "en-AU")
     }
     
   
