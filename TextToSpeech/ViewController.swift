@@ -9,8 +9,10 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, AVSpeechSynthesizerDelegate
+class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextFieldDelegate
 {
+    @IBOutlet weak var speechTextBar: UITextField!
+    
     let speechSynthesizer = AVSpeechSynthesizer() //set the synthesizer
     var speechVoice : AVSpeechSynthesisVoice? //set the voice to nil if there is none or default, idk
     
@@ -26,7 +28,9 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate
     
     @IBAction func speak(_ sender: AnyObject)
     {
-        let speechUtterance = AVSpeechUtterance(string: "Pokemon, gotta catch em all")
+        guard let unwrappedText = speechTextBar.text else {return}
+        
+        let speechUtterance = AVSpeechUtterance(string: unwrappedText)
 
         
         // set the voice

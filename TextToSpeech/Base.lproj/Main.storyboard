@@ -19,6 +19,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2x4-b6-xba">
+                                <frame key="frameInset" minX="41" minY="145" width="292" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xob-X3-t84">
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
@@ -32,12 +39,15 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xob-X3-t84" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="270" id="1ds-7d-1Ro"/>
+                            <constraint firstItem="xob-X3-t84" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="346" id="1ds-7d-1Ro"/>
                             <constraint firstItem="xob-X3-t84" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="71" id="OJA-at-pc5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xob-X3-t84" secondAttribute="trailing" constant="72" id="mzb-MF-OdD"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xob-X3-t84" secondAttribute="bottom" constant="291" id="s3O-fa-nNs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xob-X3-t84" secondAttribute="bottom" constant="215" id="s3O-fa-nNs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="speechTextBar" destination="2x4-b6-xba" id="Af4-3z-zq0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
