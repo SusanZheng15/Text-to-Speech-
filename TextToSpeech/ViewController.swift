@@ -24,7 +24,6 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
         self.speechVoice = AVSpeechSynthesisVoice.init(language: "en-AU")
     }
     
-  
     
     @IBAction func speak(_ sender: AnyObject)
     {
@@ -40,7 +39,7 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
         speechUtterance.rate = 0.5
         
         //pitchMultiplier: how high the voice will be 0.0 - 2.0
-        speechUtterance.pitchMultiplier = 2.0
+        speechUtterance.pitchMultiplier = 1.0
         
         // Volume from 0.0 to 1.0 (default 1.0)
         speechUtterance.volume = 1.0
@@ -61,6 +60,19 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance)
     {
         print("Finished saying '\(utterance.speechString)");
+    }
+    
+    
+    
+    func tap(_ gesture: UITapGestureRecognizer)
+    {
+        self.speechTextBar.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        self.speechTextBar.resignFirstResponder()
+        return true
     }
     
 
