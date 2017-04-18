@@ -13,6 +13,8 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
 {
     @IBOutlet weak var speechTextBar: UITextField!
     
+    @IBOutlet weak var accentPickerView: UIPickerView!
+    
     let speechSynthesizer = AVSpeechSynthesizer() //set the synthesizer
     var speechVoice : AVSpeechSynthesisVoice? //set the voice to nil if there is none or default, idk
     
