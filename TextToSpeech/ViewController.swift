@@ -27,6 +27,9 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
     {
         super.viewDidLoad()
         
+        accentPickerView.delegate = self
+        accentPickerView.dataSource = self
+        
         speechSynthesizer.delegate = self
         self.speechVoice = AVSpeechSynthesisVoice.init(language: "en-AU")
     }
