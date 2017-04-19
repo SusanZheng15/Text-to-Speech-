@@ -103,7 +103,7 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
         return myTitle
     }
     
-    //response touch outside the keyboard 
+    //response touch outside the keyboard
     func tap(_ gesture: UITapGestureRecognizer)
     {
         self.speechTextBar.resignFirstResponder()
