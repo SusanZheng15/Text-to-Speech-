@@ -29,6 +29,9 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
         accentPickerView.delegate = self
         accentPickerView.dataSource = self
         speechSynthesizer.delegate = self
+        
+        self.accentPickerView.backgroundColor = UIColor.black
+        
     }
     
     
@@ -93,7 +96,14 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
         self.speechVoice = AVSpeechSynthesisVoice.init(language: languageAccentCode[row])
     }
     
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString?
+    {
+        let titleData = languageTitle[row]
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.white])
+        return myTitle
+    }
     
+    //response touch outside the keyboard 
     func tap(_ gesture: UITapGestureRecognizer)
     {
         self.speechTextBar.resignFirstResponder()
