@@ -22,6 +22,7 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
     
     var languageAccentCode : [String] = ["ar-SA", "zh-CN", "zh-HK", "zh-TW", "cs-CZ", "da-DK", "nl-BE", "nl-NL", "en-AU", "en-IE", "en-ZA", "en-GB", "en-US", "fi-FI", "fr-CA", "fr-FR", "de-DE", "el-GR", "he-IL", "hi-IN", "hu-HU", "id-ID", "it-IT", "ja-JP", "ko-KR", "no-NO", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "es-MX", "es-ES", "sv-SE", "th-TH", "tr-TR"]
     
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -33,7 +34,6 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
         self.accentPickerView.backgroundColor = UIColor.black
         
     }
-    
     
     @IBAction func speak(_ sender: AnyObject)
     {
@@ -56,7 +56,7 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
         
         //make it speak
         speechSynthesizer.speak(speechUtterance)
-        
+    
     }
     
     // Called before speaking an utterance
@@ -103,7 +103,8 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
         return myTitle
     }
     
-    //response touch outside the keyboard
+    
+    //response touch outside the keyboard 
     func tap(_ gesture: UITapGestureRecognizer)
     {
         self.speechTextBar.resignFirstResponder()
