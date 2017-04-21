@@ -35,6 +35,8 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
         
     }
     
+    
+    //when user taps the button
     @IBAction func speak(_ sender: AnyObject)
     {
         guard let unwrappedText = speechTextBar.text else {return}
@@ -99,8 +101,8 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString?
     {
         let titleData = languageTitle[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.white])
-        return myTitle
+        let title = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.white])
+        return title
     }
     
     
