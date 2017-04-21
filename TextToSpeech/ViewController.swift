@@ -33,7 +33,7 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
         speechSynthesizer.delegate = self
         
         self.accentPickerView.backgroundColor = UIColor.black
-        self.labelFormat()
+        self.buttonLabelFormat()
         
     }
     
@@ -120,8 +120,8 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
         return true
     }
     
-    
-    func labelFormat()
+    //button format
+    func buttonLabelFormat()
     {
         self.speechButton.layer.borderWidth = 1
         self.speechButton.layer.borderColor = UIColor.white.cgColor
