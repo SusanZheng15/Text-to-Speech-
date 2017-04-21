@@ -11,6 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource
 {
+    @IBOutlet weak var speechButton: UIButton!
     @IBOutlet weak var speechTextBar: UITextField!
     @IBOutlet weak var accentPickerView: UIPickerView!
     @IBOutlet weak var languageAccentLabel: UILabel!
@@ -32,6 +33,7 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
         speechSynthesizer.delegate = self
         
         self.accentPickerView.backgroundColor = UIColor.black
+        self.labelFormat()
         
     }
     
@@ -118,6 +120,15 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate, UITextField
         return true
     }
     
+    
+    func labelFormat()
+    {
+        self.speechButton.layer.borderWidth = 1
+        self.speechButton.layer.borderColor = UIColor.white.cgColor
+        self.speechButton.layer.cornerRadius = 10
+        self.speechButton.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+        
+    }
 
 
 }

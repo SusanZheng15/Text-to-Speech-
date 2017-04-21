@@ -62,6 +62,7 @@
                     <connections>
                         <outlet property="accentPickerView" destination="kHe-zH-yGq" id="z0I-au-e1l"/>
                         <outlet property="languageAccentLabel" destination="hGL-ev-3xa" id="7gw-cf-gJQ"/>
+                        <outlet property="speechButton" destination="xob-X3-t84" id="bfC-yE-6JQ"/>
                         <outlet property="speechTextBar" destination="2x4-b6-xba" id="Af4-3z-zq0"/>
                     </connections>
                 </viewController>
